@@ -10,10 +10,12 @@ Area Code
 * 0x0D: 彰化縣
 * 0x10: 新竹科學園區
 * 0x12: 高雄市
+
 Type
 ----
 * 1: UBike 1.0
 * 2: UBike 2.0
+
 Status
 ------
 * 1: 正常營運
