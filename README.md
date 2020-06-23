@@ -1,4 +1,8 @@
-# Analysis UBike
+# Analysis UBik
+Country Code
+------------
+* 0: 臺灣
+
 Area Code
 ---------
 * 0x00: 台北市
