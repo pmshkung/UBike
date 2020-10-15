@@ -16,6 +16,8 @@ import javax.net.ssl.X509TrustManager;
  * @author Webb
  */
 public class SSLSocketFactory {
+    private static String[] VERIFY_HOST_NAME_ARRAY = new String[]{};
+
     private SSLSocketFactory() {
         throw new AssertionError();
     }
@@ -23,7 +25,11 @@ public class SSLSocketFactory {
     public static final HostnameVerifier DO_NOT_VERIFY = new HostnameVerifier() {
         @Override
         public boolean verify(String hostname, SSLSession session) {
-            return true;
+            if (null != hostname && hostname.isEmpty()) {
+                 return false;
+            }
+            
+            return !Arrays.asList(VERIFY_HOST_NAME_ARRAY).contains(hostname);
         }
     };
 
